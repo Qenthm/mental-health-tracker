@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "rifqisyandi-khairurrizal-mentalhealthtracker.pbp.cs.ui.ac.id",
                 "http://pbp.cs.ui.ac.id/rifqisyandi.khairurrizal/mentalhealthtracker", 
                 "https://rifqisyandi-khairurrizal-mentalhealthtracker.pbp.cs.ui.ac.id/",
-                "http://rifqisyandi-khairurrizal-mentalhealthtracker.pbp.cs.ui.ac.id/" ]
+                "http://rifqisyandi-khairurrizal-mentalhealthtracker.pbp.cs.ui.ac.id/", ]
 
 
 # Application definition
