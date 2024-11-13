@@ -27,6 +27,13 @@ SECRET_KEY = 'django-insecure-=cq%c!!rd)5s106p+e7^&jew3$+k7o!!0w)#+s5+lfdhx1j^-g
 PRODUCTION = os.getenv("PRODUCTION", False)
 DEBUG = not PRODUCTION
 
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SAMESITE = 'None'
+
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "rifqisyandi-khairurrizal-mentalhealthtracker.pbp.cs.ui.ac.id",
                 "http://pbp.cs.ui.ac.id/rifqisyandi.khairurrizal/mentalhealthtracker", 
                 "https://rifqisyandi-khairurrizal-mentalhealthtracker.pbp.cs.ui.ac.id/",
@@ -42,7 +49,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main'
+    'main',
+    'authentication',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -54,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'mental_health_tracker.urls'
